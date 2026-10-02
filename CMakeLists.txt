@@ -1,6 +1,15 @@
-cmake_minimum_required(VERSION 3.22.0)
-project(dumblang)
-add_executable(${PROJECT_NAME} src/lexer/main.cpp src//lexer/lexer.cpp src/lexer/token.cpp src/lexer/filereader.cpp)
+cmake_minimum_required(VERSION 3.20)
 
-find_package(fmt REQUIRED)
-target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt)
+project(dumblang LANGUAGES CXX VERSION 0.0)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_subdirectory(src)
+
+include(CTest)
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()

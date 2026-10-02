@@ -1,7 +1,0 @@
-display isEOF()
-display m_curr
-display m_start
-display m_sourceCode.substr(m_start, m_curr - m_start)
-display m_sourceCode.length()
-display m_curr - m_start
-display m_sourceCode

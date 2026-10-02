@@ -1,8 +1,10 @@
+debug*/
+build/
 .clangd
 .clang-tidy
+compile_commands.*
 src/lexer/main.out
 src/lexer/main.*
-build/
 src/lexer/main
 *.out
 *.exe
